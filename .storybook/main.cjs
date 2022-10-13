@@ -14,5 +14,13 @@ module.exports = {
   },
   "features": {
     "storyStoreV7": true
+  },
+  // Informando que o final da url que indica o nome do repo, não é uma pasta e sim um caminho absoluto
+  viteFinal: (config, {configType}) => {
+    if (configType == 'PRODUCTION') {
+      config.base = '/ignitelab-design-system/'
+    }
+
+    return config
   }
 }
